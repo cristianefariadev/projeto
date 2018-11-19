@@ -116,4 +116,27 @@ public class ServicoPO {
 		}
 		return objeto;
 	}
+	
+	public Servico pesquisarPorTitulo(String termoPesquisado) {
+		Servico objeto = new Servico();
+		try {
+			connection = ConexaoUtil.getConnection();
+			PreparedStatement ps = connection.
+					prepareStatement("select * from servico where titulo=?");
+			ps.setString(1, termoPesquisado);
+			ResultSet rs = ps.executeQuery();
+			
+			if (rs.next()) {
+				objeto.setId(rs.getInt("id"));
+				objeto.setTitulo(rs.getString("titulo"));
+				objeto.setDescricao(rs.getString("descricao"));
+			}
+			
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return new Servico();
+		}
+		return objeto;
+	}
 }

@@ -22,19 +22,23 @@
 
 				<div class="nav flex-column nav-pills" id="v-pills-tab"
 					role="tablist" aria-orientation="vertical">
-
-					<a class="nav-link active" id="v-pills-register-tab"
-						data-toggle="pill" href="#v-pills-register" role="tab"
-						aria-controls="v-pills-register" aria-selected="true"><i
-						class="fa fa-trash"></i> Cadastrar Serviço</a> <a class="nav-link"
+					
+					<a class="nav-link active"
 						id="v-pills-search-tab" data-toggle="pill" href="#v-pills-search"
 						role="tab" aria-controls="v-pills-search" aria-selected="false"><i
 						class="fa fa-search"></i> Pesquisar Serviços</a>
+
+					<a class="nav-link " id="v-pills-register-tab"
+						data-toggle="pill" href="#v-pills-register" role="tab"
+						aria-controls="v-pills-register" aria-selected="true"><i
+						class="fa fa-trash"></i> Cadastrar Serviço</a> 
+						
+						
 				</div>
 			</div>
 			<div class="col-9">
 				<div class="tab-content" id="v-pills-tabContent">
-					<div class="tab-pane fade show active" id="v-pills-register"
+					<div class="tab-pane fade " id="v-pills-register"
 						role="tabpanel" aria-labelledby="v-pills-register-tab">
 
 						<div class="row">
@@ -79,21 +83,21 @@
 						</div>
 					</div>
 
-					<div class="tab-pane fade" id="v-pills-search" role="tabpanel"
+					<div class="tab-pane fade show active" id="v-pills-search" role="tabpanel"
 						aria-labelledby="v-pills-search-tab">
 
 						<div class="row my-3">
-							<div class="col-md-6">
+							<div class="col-md-8">
 								<form class="form-inline my-2 my-lg-0 " method="GET"
-									action="ServicoController" name="consultarServico">
-									<input class="form-control mr-sm-2" type="search"
-										placeholder="Pesquisar por..." aria-label="Search">
+									action="consultar" name="consultar">
+									<input class="form-control mr-sm-2" type="search" name="termoPesquisado"
+										placeholder="Buscar por..." aria-label="Search">
 									<button class="btn btn-primary my-2 my-sm-0" type="submit">
-										<i class="fa fa-search"></i>
+										<i class="fa fa-search"> Pesquisar</i>
 									</button>
 								</form>
 							</div>
-							<div class="col-md-6 text-right">
+							<div class="col-md-4 text-right">
 								<a class="btn btn-info" href="ServicoController?action=listar"><i
 									class="fa fa-list"></i> Mostrar Todos</a>
 							</div>

@@ -48,7 +48,8 @@ public class ServicoController extends HttpServlet {
 			
 		} else if (botao.equalsIgnoreCase("consultar")) {
 			caminho = SERVICO;
-//			request.setAttribute("lista", po.consultar(id));
+			String termoPesquisado = request.getParameter("termoPesquisado");
+			request.setAttribute("lista", po.pesquisarPorTitulo(termoPesquisado));
 
 		} else {
 			caminho = SERVICO;
