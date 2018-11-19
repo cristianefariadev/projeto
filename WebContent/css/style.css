@@ -34,52 +34,8 @@ th {
 	overflow: auto;
 }
 
-.navbar-default {
-	background-color: #0d3b66;
-	border-color: #0d3b66;
-}
-
-.navbar-default .navbar-brand {
-	color: #ffffff;
-}
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
-	{
-	color: #5facf4;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: #fff;
-}
-
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus{
-	color: #5facf4;
-}
-
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-	.navbar-default .navbar-nav>.active>a:focus {
-	color: #5facf4;
-	background-color: #fff;
-}
-
-.navbar-default .navbar-toggle,
-.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus
-	{
-	background-color: #5facf4;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #0d3b66;
-}
-
-.navbar-default .navbar-link {
-	color: #fff;
-}
-
-.navbar-default .navbar-link:hover {
-	color: #5facf4;
+.icones{
+	width: 60px;
+	margin: 0 3px;
 }
 
