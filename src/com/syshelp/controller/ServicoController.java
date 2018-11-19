@@ -66,7 +66,7 @@ public class ServicoController extends HttpServlet{
 		 			po.adicionar(objeto);
 		 		} else {
 		 			objeto.setId(Integer.parseInt(id));
-		 			po.adicionar(objeto);
+		 			po.atualizar(objeto);
 		 		}
 
 		RequestDispatcher view = request.getRequestDispatcher(SERVICO);

@@ -33,17 +33,24 @@
 					<hr>
 				</h3>
 				<div class="panel-body">
-					<form method="POST" action="ProdutoController"
-						name="adicionarProduto">
+					<form method="POST" action="ServicoController"
+						name="adicionarServico">
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-2">
+								<div class="form-group">
+									<label for="id">Código:</label> <input type="number"
+										readonly="readonly" class="form-control" id="id" name="id"
+										value="<c:out value="${inserir.id}"/>" />
+								</div>
+							</div>
+							<div class="col-md-10">
 								<div class="form-group">
 									<label for="titulo">Título:</label> <input class="form-control"
 										type="text" id="titulo" name="titulo"
 										value="<c:out value="${inserir.titulo}"/>" required />
 								</div>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-12">
 								<div class="form-group">
 									<label for="descricao ">Descrição:</label>
 									<textarea class="form-control" rows="5" id="descricao"
@@ -66,19 +73,22 @@
 				<table class="table table-striped  text-center" id="tabela">
 					<thead>
 						<tr id="titulo">
+							<th>Id</th>
 							<th>Título</th>
 							<th>Descrição</th>
+							<th colspan="2">Ação</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${lista}" var="listagem">
 							<tr>
+								<td><c:out value="${listagem.id}" /></td>
 								<td><c:out value="${listagem.titulo}" /></td>
 								<td><c:out value="${listagem.descricao}" /></td>
 								<td><a class="btn btn-warning"
-									href="ProdutoController?action=editar&id=<c:out value="${listagem.id}"/>">Alterar</a></td>
+									href="ServicoController?action=editar&id=<c:out value="${listagem.id}"/>">Alterar</a></td>
 								<td><a class="btn btn-danger"
-									href="ProdutoController?action=deletar&id=<c:out value="${listagem.id}"/>">Apagar</a></td>
+									href="ServicoController?action=deletar&id=<c:out value="${listagem.id}"/>">Apagar</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

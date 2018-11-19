@@ -1,7 +1,5 @@
 package com.syshelp.po;
 
-
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,8 +19,7 @@ public class ServicoPO {
 		try {
 			connection = ConexaoUtil.getConnection();
 			PreparedStatement ps = connection
-					.prepareStatement("insert into servico(titulo, descricao)"
-							+ "values (?, ?, ?)");
+					.prepareStatement("insert into servico(titulo, descricao) values (?, ?)");
 			
 			ps.setString(1, objeto.getTitulo());
 			ps.setString(2, objeto.getDescricao());
@@ -63,7 +60,7 @@ public class ServicoPO {
 			
 			ps.setString(1, objeto.getTitulo());
 			ps.setString(2, objeto.getDescricao());
-			ps.setInt(14, objeto.getId());
+			ps.setInt(3, objeto.getId());
 			ps.executeUpdate();
 			
 			ps.close();

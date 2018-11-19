@@ -13,12 +13,12 @@ public class ConexaoUtil {
 			return connection;
 		else {
 			try {
-				
-				 String driver = "com.mysql.jdbc.Driver"; String url =
-				 "jdbc:mysql://localhost:3306/projetovenda"; String user = "root";
-				  String password = "";
-				 
-				
+
+				String driver = "com.mysql.jdbc.Driver";
+				String url = "jdbc:mysql://localhost:3306/projeto";
+				String user = "root";
+				String password = "";
+
 //				String driver = "org.postgresql.Driver";
 //				String url = "jdbc:postgresql://localhost:5432/formulario";
 //				String user = "postgres";

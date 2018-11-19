@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ServiTech | Projeto Integrador</title>
+<title>SYSHELP | Projeto Integrador</title>
 
 <link rel="shortcut icon" href="imagem/favicon.png" type="image/png">
 
@@ -34,8 +34,8 @@
 				<div class="col-md-6">
 					<h2>Seja bem vindo ao posso ajudar, cadastre serviços e consulte
 						quando precisar!</h2>
-						<a class="btn btn-info btn-block href="cadastro.jsp">CONSULTAR</a>
-						<a class="btn btn-primary btn-block href="cadastro.jsp">CADASTRAR</a>
+						<a class="btn btn-info btn-block href="ServicoController?action=listar">CONSULTAR</a>
+						<a class="btn btn-primary btn-block href="ServicoController?action=listar">CADASTRAR</a>
 				</div>
 			</div>
 		</div>
