@@ -94,7 +94,7 @@ public class ServicoPO {
 		return lista;
 	}
 	
-	public Servico consultar(int id) {
+	public Servico consultarPorId(int id) {
 		Servico objeto = new Servico();
 		try {
 			connection = ConexaoUtil.getConnection();

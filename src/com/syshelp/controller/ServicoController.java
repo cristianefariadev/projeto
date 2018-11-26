@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.syshelp.po.ServicoPO;
 import com.syshelp.entidade.Servico;
+import com.syshelp.bo.ServicoBO;
 
 @WebServlet("/ServicoController")
 public class ServicoController extends HttpServlet {
@@ -19,9 +20,12 @@ public class ServicoController extends HttpServlet {
 	private static String SERVICO = "/servico.jsp";
 
 	private ServicoPO po;
+	private ServicoBO bo;
+
 
 	public ServicoController() {
 		po = new ServicoPO();
+		bo = new ServicoBO();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -38,7 +42,7 @@ public class ServicoController extends HttpServlet {
 		} else if (botao.equalsIgnoreCase("editar")) {
 			caminho = SERVICO;
 			int id = Integer.parseInt(request.getParameter("id"));
-			Servico objeto = po.consultar(id);
+			Servico objeto = po.consultarPorId(id);
 			request.setAttribute("inserir", objeto);
 //			request.setAttribute("lista", po.listar());
 
@@ -68,10 +72,10 @@ public class ServicoController extends HttpServlet {
 
 		String id = request.getParameter("id");
 		if (id == null || id.isEmpty()) {
-			po.adicionar(objeto);
+			bo.salvar(objeto);
 		} else {
 			objeto.setId(Integer.parseInt(id));
-			po.atualizar(objeto);
+			bo.salvar(objeto);
 		}
 
 		RequestDispatcher view = request.getRequestDispatcher(SERVICO);

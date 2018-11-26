@@ -92,7 +92,7 @@
 									action="consultar" name="consultar">
 									<input class="form-control mr-sm-2" type="search" name="termoPesquisado"
 										placeholder="Buscar por..." aria-label="Search">
-									<button class="btn btn-primary my-2 my-sm-0" type="submit">
+									<button class="btn btn-primary my-2 my-sm-0" value="consultar" id="botao" name="botao" type="submit">
 										<i class="fa fa-search"> Pesquisar</i>
 									</button>
 								</form>
